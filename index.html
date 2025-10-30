@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +7,202 @@
 </head>
 <body>
     <style>
+        :root{
+            --primary-color: #0E6081;
+            --complementary-color: #C79A46;
+            --bg-neutro: white;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            border-radius: 0;
+        }
         body{
             background-color: #ccc;
             font-size: 1.5rem;
             font-family: sans-serif;
             color: black;
         }
-        div{
+        section{
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            margin: 0 auto;
-            border: 1px solid gray;
-            border-radius: 8px;
-            width: 600px;
-            padding: 5px;
-            background-color: white;
+            width: 100%;
+            height: 100vh;
+            background-color: #F5F5F5;
+            border-top: 10px solid var(--complementary-color);
         }
-    </style>
+        .main_section .content{
+            width: 100%;
+        }
+        .main_header{
+            height: 80px;
+            display: flex;
+            width: 1444px;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--bg-neutro);
+        }
+        .logos{
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+        }
+        .ot{
+            margin-top: 50px;
+            width: auto;
+            height: 150px;
+        }
+        .main_nav ul{
+            display: flex;
+            gap: 20px 20px;
+            height: 30px;
+        }
+        .main_nav ul li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 5px;
+            background-color: var(--primary-color);
+        }
+        .main_nav ul li a{
+            color: white;
+            font-size: 12px;
+            font-weight: bolder;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            
+        }
+        .main_nav ul li:hover{
+            cursor: pointer;
+            background-color: var(--complementary-color);
+            transition: all 0.1s ease;
+            border-bottom: solid 4px var(--primary-color);
+        }
 
-    <div>
-        <h1>
-            Site em desenvolvimento
-        </h1>
-        <p>
-            Fase de configuração
-        </p>
-    </div>
+        /* ===== dropdown ===== */
+        .dropdown{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #093e4c;
+            min-width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            flex-direction: column;
+            z-index: 10;
+        }
+        .dropdown li{
+            width: 100%;
+            background-color: var(--primary-color);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 10px;
+        }
+        .dropdown li a{
+            color: white;
+            font-size: 12px;
+            text-transform: none;
+        }
+        .dropdown li:hover{
+            background-color: #084d67;
+        }
+        .btn_nav:hover .dropdown{
+            display: flex;
+        }
+        .content{
+            height: 100%;
+            width: 1444px;
+            border: none;
+            background-color: var(--bg-neutro);
+        }
+        .main_content{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 90%;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(/assets/imgs/bg1.png);
+        }
+        .txt_box{
+            position: relative;
+            left: 20%;
+            width: 400px;
+            height: auto;
+        }
+        .txt_box p, h2{
+            color: white;
+        }
+        .txt_box h2{
+            line-height: 70px;
+            font-size: 2em;
+        }
+        .txt_box p{
+            font-size: 1em;
+            font-weight: lighter;
+        }
+</style>
+
+     <section class="main_section">
+        <div class="content">
+            <header class="main_header">
+                <div class="logos">
+                    <img class="ot" src="/assets/imgs/torresNetoLogo.png" alt="TorresNeto" class="logo_torresNeto">
+                    <img src="/assets/imgs/allILogo.png" alt="All" class="logo_all">
+                </div>
+                <nav class="main_nav">
+                    <ul>
+                        <li class="btn_nav"><a href="#">Home</a></li>
+                        <li class="btn_nav"><a href="#">Empresa</a></li>
+                        <li class="btn_nav">
+                            <a href="#">Áreas de atuação ▼</a>
+                            <!-- <ul class="dropdown">
+                                <li><a href="#">Direito Empresarial</a></li>
+                                <li><a href="#">Direito Tributário</a></li>
+                                <li><a href="#">Direito Trabalhista</a></li>
+                                <li><a href="#">Direito Cível</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="btn_nav"><a href="#">Insights</a></li>
+                        <li class="btn_nav">
+                            <a href="#">Contato ▼</a>
+                            <!-- <ul class="dropdown">
+                                <li><a href="#">Fale Conosco</a></li>
+                                <li><a href="#">Canal de Denúncias</a></li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="main_content">
+                <div class="txt_box">
+                    <h2>INTELIGÊNCIA FORENSE</h2>
+                    <p>Para que sua empresa seja mais competitiva e avance na direção certa com segurança.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="content">
+            
+        </div>
+    </section>    <section>
+        <div class="content">
+            
+        </div>
+    </section>    <section>
+        <div class="content">
+            
+        </div>
+    </section>    <section>
+        <div class="content">
+            
+        </div>
+    </section> -->
     
 </body>
 </html>
