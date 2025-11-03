@@ -3,151 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <style>
-        :root{
-            --primary-color: #0E6081;
-            --complementary-color: #C79A46;
-            --bg-neutro: white;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style: none;
-            box-sizing: border-box;
-            border-radius: 0;
-        }
-        body{
-            background-color: #ccc;
-            font-size: 1.5rem;
-            font-family: sans-serif;
-            color: black;
-        }
-        section{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            background-color: #F5F5F5;
-            border-top: 10px solid var(--complementary-color);
-        }
-        .main_section .content{
-            width: 100%;
-        }
-        .main_header{
-            height: 80px;
-            display: flex;
-            width: 1444px;
-            margin: 0 auto;
-            align-items: center;
-            justify-content: space-between;
-            background-color: var(--bg-neutro);
-        }
-        .logos{
-            height: 100%;
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-        }
-        .ot{
-            margin-top: 50px;
-            width: auto;
-            height: 150px;
-        }
-        .main_nav ul{
-            display: flex;
-            gap: 20px 20px;
-            height: 30px;
-        }
-        .main_nav ul li{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            padding: 5px;
-            background-color: var(--primary-color);
-        }
-        .main_nav ul li a{
-            color: white;
-            font-size: 12px;
-            font-weight: bolder;
-            font-family: sans-serif;
-            text-transform: uppercase;
-            
-        }
-        .main_nav ul li:hover{
-            cursor: pointer;
-            background-color: var(--complementary-color);
-            transition: all 0.1s ease;
-            border-bottom: solid 4px var(--primary-color);
-        }
-
-        /* ===== dropdown ===== */
-        .dropdown{
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #093e4c;
-            min-width: 220px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            flex-direction: column;
-            z-index: 10;
-        }
-        .dropdown li{
-            width: 100%;
-            background-color: var(--primary-color);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding: 8px 10px;
-        }
-        .dropdown li a{
-            color: white;
-            font-size: 12px;
-            text-transform: none;
-        }
-        .dropdown li:hover{
-            background-color: #084d67;
-        }
-        .btn_nav:hover .dropdown{
-            display: flex;
-        }
-        .content{
-            height: 100%;
-            width: 1444px;
-            border: none;
-            background-color: var(--bg-neutro);
-        }
-        .main_content{
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 90%;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(/assets/imgs/bg1.png);
-        }
-        .txt_box{
-            position: relative;
-            left: 20%;
-            width: 400px;
-            height: auto;
-        }
-        .txt_box p, h2{
-            color: white;
-        }
-        .txt_box h2{
-            line-height: 70px;
-            font-size: 2em;
-        }
-        .txt_box p{
-            font-size: 1em;
-            font-weight: lighter;
-        }
-</style>
-
-     <section class="main_section">
+    <section id="home" class="main_section">
         <div class="content">
             <header class="main_header">
                 <div class="logos">
@@ -156,8 +16,8 @@
                 </div>
                 <nav class="main_nav">
                     <ul>
-                        <li class="btn_nav"><a href="#">Home</a></li>
-                        <li class="btn_nav"><a href="#">Empresa</a></li>
+                        <li class="btn_nav"><a href="#home">Home</a></li>
+                        <li class="btn_nav"><a href="#empresa">Empresa</a></li>
                         <li class="btn_nav">
                             <a href="#">Áreas de atuação ▼</a>
                             <!-- <ul class="dropdown">
@@ -167,9 +27,9 @@
                                 <li><a href="#">Direito Cível</a></li>
                             </ul> -->
                         </li>
-                        <li class="btn_nav"><a href="#">Insights</a></li>
+                        <li class="btn_nav"><a href="#insights">Insights</a></li>
                         <li class="btn_nav">
-                            <a href="#">Contato ▼</a>
+                            <a href="#contato">Contato ▼</a>
                             <!-- <ul class="dropdown">
                                 <li><a href="#">Fale Conosco</a></li>
                                 <li><a href="#">Canal de Denúncias</a></li>
@@ -186,23 +46,100 @@
             </div>
         </div>
     </section>
-    <!-- <section>
-        <div class="content">
-            
+    <section id="empresa">
+        <div class="content otavio">
+            <h1>TORRES NETO ADVOGADOS</h1>
+            <p>O Torres Neto Advogados é um escritório de advocacia estratégico, moderno e orientado a resultados, voltado às demandas empresariais e à gestão pública. Nosso trabalho é pautado pela ética, clareza na comunicação e excelência técnica, sempre com foco em oferecer soluções jurídicas eficazes e alinhadas aos objetivos de nossos clientes.</p>
+            <p>Atuamos em Direito Empresarial, Tributário, Contratual, Regulatório e Propriedade Intelectual, assessorando empresas nacionais e multinacionais, grupos econômicos e entes públicos em projetos de estruturação, governança, compliance e mitigação de riscos jurídicos.</p>
+            <p>Temos experiência consolidada em operações de Fusões e Aquisições (M&A), oferecendo suporte jurídico completo em reorganizações societárias, due diligence, estruturação de investimentos e negociação de contratos de compra e venda de participações societárias. Nosso objetivo é garantir segurança jurídica, eficiência negocial e alinhamento estratégico em todas as etapas.</p>
+            <p>O escritório também se destaca pela atuação junto a prefeituras e autarquias municipais, prestando assessoria técnica em recuperação de créditos tributários, com foco na identificação, revisão e cobrança de receitas públicas, sempre de forma técnica, transparente e em conformidade com as boas práticas de gestão fiscal.</p>
+            <p>Nosso propósito é ser um parceiro estratégico de organizações públicas e privadas, entregando segurança jurídica, eficiência na gestão e geração de valor sustentável. Acreditamos em uma advocacia que antecipa riscos, apoia decisões e fortalece instituições, com base em rigor técnico, visão de negócios e compromisso com resultados.</p>
         </div>
-    </section>    <section>
-        <div class="content">
-            
+    </section>
+    <section id="socio">
+        <div class="content otavio2">
+            <div class="foto_perfil">
+                <div class="foto">
+                    <img src="/assets/imgs/foto.jpg" alt="">
+                </div>
+                <div class="nome">
+                    <h3>Otavio Gonçalves <br> Torres Neto</h3>
+                    <strong>SÓCIO FUNDADOR</strong>
+                </div>
+            </div>
+            <div class="text_box">
+                <p>Otavio Gonçalves Torres Neto é advogado com mais de 15 anos de experiência em multinacionais e órgãos públicos. É Pós-graduado em Tributação e Gestão Tributária pela Universidade Presbiteriana Mackenzie e Especialista em Direito Processual pela Pontifícia Universidade Católica (PUC). Sua formação acadêmica sólida é a base de uma atuação técnica, estratégica e voltada à gestão jurídica de negócios e instituições.</p>
+                <p>Ao longo da carreira, atuou em diversas frentes do Direito Empresarial e Tributário, com ênfase em operações de Fusões e Aquisições (M&A), governança corporativa, compliance, planejamento tributário, recuperação de créditos públicos e proteção de marcas. Essa trajetória consolidou sua experiência em assessoria jurídica de alta complexidade e no apoio à tomada de decisão estratégica de empresas e entes públicos.</p>
+                <p>É membro das Comissões de Direito Tributário, Direito Empresarial, Direito Processual Civil e Propriedade Intelectual da OAB, além de integrar o Instituto Brasileiro de Direito Tributário (IBDT), a Associação dos Advogados de São Paulo (AASP) e o Instituto dos Contadores do Brasil (ICBR), onde atua como associado convidado.</p>
+                <p>Em sua trajetória, desenvolveu uma atuação marcada pelo rigor técnico, visão estratégica e abordagem multidisciplinar, consolidando-se como referência na estruturação jurídica de negócios e na defesa de interesses corporativos e públicos.</p>
+                <p>Fundou o Torres Neto Advogados com a missão de oferecer uma advocacia moderna, estratégica e comprometida com resultados, aliando excelência técnica, clareza na comunicação e foco no desenvolvimento sustentável das organizações que representa.</p>
+            </div>
         </div>
-    </section>    <section>
-        <div class="content">
-            
+    </section>
+    <section id="insights">
+        <div class="content content_insights">
+            <header class="header_insights">
+                <h2>insights</h2>
+            </header>
+            <div class="insights">
+                <article class="insight">
+                    <h3>ISS na base do PIS/COFINS (Tema 118): impacto tributário e oportunidades</h3>
+                    <p>O STF está prestes a decidir se o ISS deve integrar a base de cálculo do PIS e da COFINS. No julgamento do Tema 118 (RE 592.616/RS), a Corte discute se o imposto municipal pode ser considerado receita ou faturamento da empresa para fins de incidência dessas contribuições. Em termos práticos </p>
+                    <button>saiba mais...</button>
+                </article>
+                <article class="insight">
+                    <h3>ISS na base do PIS/COFINS (Tema 118): impacto tributário e oportunidades</h3>
+                    <p>O STF está prestes a decidir se o ISS deve integrar a base de cálculo do PIS e da COFINS. No julgamento do Tema 118 (RE 592.616/RS), a Corte discute se o imposto municipal pode ser considerado receita ou faturamento da empresa para fins de incidência dessas contribuições. Em termos práticos </p>
+                    <button>saiba mais...</button>
+                </article>
+                <article class="insight">
+                    <h3>ISS na base do PIS/COFINS (Tema 118): impacto tributário e oportunidades</h3>
+                    <p>O STF está prestes a decidir se o ISS deve integrar a base de cálculo do PIS e da COFINS. No julgamento do Tema 118 (RE 592.616/RS), a Corte discute se o imposto municipal pode ser considerado receita ou faturamento da empresa para fins de incidência dessas contribuições. Em termos práticos </p>
+                    <button>saiba mais...</button>
+                </article>
+                <article class="insight">
+                    <h3>ISS na base do PIS/COFINS (Tema 118): impacto tributário e oportunidades</h3>
+                    <p>O STF está prestes a decidir se o ISS deve integrar a base de cálculo do PIS e da COFINS. No julgamento do Tema 118 (RE 592.616/RS), a Corte discute se o imposto municipal pode ser considerado receita ou faturamento da empresa para fins de incidência dessas contribuições. Em termos práticos </p>
+                    <button>saiba mais...</button>
+                </article>
+            </div>
+            <footer class="footer_insights">
+                <button>Ler mais</button>
+        </footer>
         </div>
-    </section>    <section>
-        <div class="content">
-            
+    </section>
+    <footer id="contato" class="main_footer">
+        <header class="footer_header">
+            <h2>Contato</h2>
+        </header>
+        <div class="contato">
+            <div class="info">
+                <div class="telefone">
+                    <strong>Telefone</strong>
+                    <span>(00) 9 9999-9999</span>
+                </div>
+                <div class="email">
+                    <strong>E-mail</strong>
+                    <span>contato@mtneto.com.br</span>
+                </div>
+                <div class="social">
+                    <div class="icon">
+                        <img src="/assets/imgs/Instagram-Logo-White-PNG.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="formulario">
+                <form action="">
+                    <input type="text" placeholder="Nome">
+                    <input type="email" name="" id="" placeholder="E-mail">
+                    <textarea name="" id="" placeholder="Mensagem"></textarea>
+                    <button type="button">Enviar</button>
+                </form>
+            </div>
         </div>
-    </section> -->
-    
+        <div class="copy">
+            <span>todos os direitos reservados</span>
+        </div>
+    </footer>
 </body>
 </html>

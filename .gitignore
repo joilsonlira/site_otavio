@@ -1,0 +1,11 @@
+        # Ignore VS Code specific files
+        .vscode/
+
+        # Ignore log files
+        *.log
+
+        # Ignore temporary files
+        *.tmp
+
+        #Ignore Desktop folder
+        assets/Área de trabalho
