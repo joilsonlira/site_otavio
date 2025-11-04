@@ -138,6 +138,7 @@
     }
     .insights .insight h3{
         font-size: 20px;
+        text-transform: uppercase;
     }
     .insights .insight p{
         font-size: 16px;
