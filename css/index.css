@@ -171,16 +171,16 @@
         color: var(--complementary-color);
         border-color: var(--complementary-color);
     }
-    
     .main_section .content{
         width: 100%;
     }
     #home{
-        margin-top: 0;
+        margin-top: 100px;
         border: none;
     }
     .main_header{
         position: fixed;
+        top: 0;
         height: 100px;
         display: flex;
         width: 100%;
