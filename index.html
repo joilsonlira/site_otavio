@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/slide.css">
     <title>Document</title>
 </head>
 <body>
@@ -39,10 +40,19 @@
     <section id="home" class="main_section">
         <div class="content">
             <div class="main_content">
-                <div class="txt_box">
-                    <h2>Excelência Técnica</h2>
-                    <p>Rigor jurídico que se traduz em resultados concretos.</p>
-                </div>
+            <!-- camadas de fundo que deslizam -->
+            <div class="bg_slider"></div>
+            <div class="bg_slider next"></div>
+
+            <!-- bloco de textos que muda por slide -->
+            <div class="txt_box" aria-live="polite">
+                <h2>Excelência Técnica</h2>
+                <p>Rigor jurídico que se traduz em resultados concretos.</p>
+            </div>
+
+            <!-- botões -->
+            <button class="nav_btn prev" aria-label="Slide anterior">&#10094;</button>
+            <button class="nav_btn next_btn" aria-label="Próximo slide">&#10095;</button>
             </div>
         </div>
     </section>
@@ -141,5 +151,7 @@
             <span>todos os direitos reservados</span>
         </div>
     </footer>
+    <!-- Link para o JS externo -->
+    <script src="/js/slide.js"></script>
 </body>
 </html>

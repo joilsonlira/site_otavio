@@ -1,0 +1,88 @@
+.main_content {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;          /* ajuste se preferir */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.bg_slider,
+.bg_slider.next {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.5s ease;
+}
+
+/* imagem inicial */
+.bg_slider {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/assets/imgs/bg1.png);
+}
+
+/* a “próxima” começa fora da tela à direita */
+.bg_slider.next {
+  transform: translateX(100%);
+}
+
+/* texto acima das imagens */
+.txt_box {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  text-align: left;
+  padding-inline: 1rem;
+  max-width: 980px;
+  transition: opacity .8s ease-in-out, transform .8s ease-in-out;
+}
+
+/* efeito de saída/entrada do texto */
+.txt_box.fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.txt_box h2 {
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+
+.txt_box p {
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: 1.5;
+  opacity: .95;
+}
+
+/* botões */
+.nav_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: rgba(255,255,255,0.3); */
+    background-color: #C79A46;
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    /* padding: 5px 5px; */
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 0;
+    transition: background .3s;
+    user-select: none;
+}
+
+.nav_btn:hover { background: rgba(255,255,255,0.6); }
+.prev { left: 20px; }
+.next_btn { right: 20px; }
+
+/* opcional: esconder setas no mobile muito pequeno */
+@media (max-width: 420px) {
+  .nav_btn { font-size: 1.5rem; padding: 8px 10px; }
+}
