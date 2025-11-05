@@ -147,6 +147,41 @@
         font-size: 16px;
         line-height: 150%;
     }
+    #atuacao{
+        background-color: var(--primary-color);
+    }
+    .atuacoes{
+    }
+    .atuacoes h2{
+        color: white;
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+    .content_atuacao{
+        display: flex;
+        justify-content: center;
+        column-gap: 54px;
+        width: 1444px;
+    }
+    .atuacao{
+        width: 600px;
+    }
+    .atuacao_header{
+        padding: 15px 15px;
+        margin: 15px 0;
+        background-color: var(--complementary-color);
+    }
+    .atuacao_header h3{
+        color: white;
+        text-transform: uppercase;
+    }
+    .atuacao div p{
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
     .footer_insights button, .insights .insight button{
         font-size: 12px;
         width:fit-content;
