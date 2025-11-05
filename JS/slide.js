@@ -5,17 +5,17 @@ const slides = [
     desc:  'Rigor jurídico que se traduz em resultados concretos.'
   },
   {
-    image: '/assets/imgs/bg1.png',
+    image: '/assets/imgs/bg3.png',
     title: 'Visão Estratégica',
     desc:  'Antecipamos riscos, potencializamos oportunidades.'
   },
   {
-    image: '/assets/imgs/bg1.png',
+    image: '/assets/imgs/bg4.png',
     title: 'Clareza e Ética',
     desc:  'Transparência que inspira confiança.'
   },
   {
-    image: '/assets/imgs/bg1.png',
+    image: '/assets/imgs/bg2.png',
     title: 'Inovação e valor sustentável',
     desc:  'Inovar para gerar valor que permanece.'
   },

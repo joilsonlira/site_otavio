@@ -114,6 +114,9 @@
         display: block;
         background-color: coral;
     }
+    .header_insight h2{
+        text-transform: uppercase;
+    }
     .content_insights .header_insights{
         display: flex;
         align-items: center;
