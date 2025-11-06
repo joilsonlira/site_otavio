@@ -150,8 +150,6 @@
     #atuacao{
         background-color: var(--primary-color);
     }
-    .atuacoes{
-    }
     .atuacoes h2{
         color: white;
         font-weight: 400;
@@ -208,6 +206,35 @@
     .footer_insights button{
         color: var(--complementary-color);
         border-color: var(--complementary-color);
+    }
+    .insights_page{
+        display: block;
+        height: auto;
+        margin-top: 100px;
+        padding-bottom: 30px;
+    }
+    .insights_page .header_insights{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        margin-bottom: 100px;
+        background-size:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(40, 99, 177, 0.7), rgba(15, 58, 113, 0.7)), url(/assets/imgs/bg4.png);
+    }
+    .insights_page div{
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        row-gap: 50px;
+        width: 1444px;
+    }
+    .insights_page div article{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
     .main_section .content{
         width: 100%;
