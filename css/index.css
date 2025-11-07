@@ -250,23 +250,23 @@
         display: flex;
         width: 100%;
         z-index: 11;
-        padding: 30px 20%;
+        padding: 0 15%;
         margin: 0 auto;
         align-items: center;
         justify-content: space-between;
-        background-color: var(--bg-neutro);
+        background-color: #fafafa;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
     .logos{
-        height: 100%;
         display: flex;
-        overflow: hidden;
         align-items: center;
+        justify-content: space-between;
+        height: 100%;
     }
-    .ot{
-        margin-top: 50px;
-        width: auto;
-        height: 150px;
+    
+    .logos a img{
+        height: auto;
+        width: 220px;
     }
     .main_nav ul{
         display: flex;

@@ -8,23 +8,23 @@
 }
 
 .bg_slider,
-.bg_slider.next {
+.bg_slider.next{
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 1.5s ease;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
 }
 
-/* imagem inicial */
-.bg_slider {
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/assets/imgs/bg1.png);
+/* importantíssimo: a 1ª já vem com a imagem e visível */
+.bg_slider{
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/assets/imgs/bg1.png);
+  opacity: 1;
+  z-index: 1;
 }
 
-/* a “próxima” começa fora da tela à direita */
-.bg_slider.next {
-  transform: translateX(100%);
-}
+.bg_slider.next{ z-index: 2; }
 
 /* texto acima das imagens */
 .txt_box {
