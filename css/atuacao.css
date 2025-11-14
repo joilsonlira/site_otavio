@@ -1,0 +1,47 @@
+section{
+    display: flex;
+    row-gap: 100px;
+    flex-direction: column;
+    height: auto;
+    margin-top: 100px;
+    padding: 50px 0;
+}
+article{
+    width: 1444px;
+}
+article header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: 50px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Contratos .header_atuacao{
+    background-image: linear-gradient(rgba(40, 99, 177, 0.7), rgba(15, 58, 113, 0.7)), url(/assets/imgs/contratos.jpg);
+}
+.Direito_Empresarial .header_atuacao{
+    background-image: linear-gradient(rgba(40, 99, 177, 0.7), rgba(15, 58, 113, 0.7)), url(/assets/imgs/direito_empresarial.jpg);
+}
+.Direito_Tributario .header_atuacao{
+    background-image: linear-gradient(rgba(40, 99, 177, 0.7), rgba(15, 58, 113, 0.7)), url(/assets/imgs/direito_tributario.jpg);
+}
+.Propriedade_Intelectual .header_atuacao{
+    background-image: linear-gradient(rgba(40, 99, 177, 0.7), rgba(15, 58, 113, 0.7)), url(/assets/imgs/propriedade_intelectual.jpg);
+}
+h2{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+article div{
+    padding: 0 10px;
+}
+article div p{
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 20px;
+}
