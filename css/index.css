@@ -367,18 +367,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 10%;
+        height: 100px;
     }
     .main_footer header h2{
         color: black;
         font-size: 24px;
         font-weight: 400;
+        text-transform: uppercase;
     }
     .main_footer .contato{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 80%;
+        height: auto;
         width: 1444px;
     }
     .main_footer .contato .info{
@@ -420,14 +421,15 @@
     }
     .main_footer .contato .formulario{
         width: 50%;
-        height: 50%;
+        height: auto;
     }
     .formulario form{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 100%;
+        height: auto;
+        padding: 20px;
         width: 70%;
         row-gap: 10px;
         background-color: var(--primary-color);
@@ -462,13 +464,24 @@
         font-weight: lighter;
         color: white;
     }
+    .mapa .footer-info h3{
+        font-size: 24px;
+        font-family: 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+    }
+    .mapa .footer-info p{
+        font-size: 16px;
+        line-height: 20px;
+        margin: 10px 0;
+    }
     .mapa{
         width: 1444px;
         height: auto;
+
     }
     .mapa iframe {
     width: 100%;
-    height: 250px;
+    height: 500px;
     border: none;
     border-radius: 8px;
     }
