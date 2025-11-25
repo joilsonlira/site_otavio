@@ -1,6 +1,3 @@
-// slide.js
-['/assets/imgs/bg1.png','/assets/imgs/bg2.png','/assets/imgs/bg3.png','/assets/imgs/bg4.png']
-  .forEach(src => { const img = new Image(); img.src = src; });
 const slides = [
   {
     image: '/assets/imgs/bg1.png',
@@ -8,17 +5,17 @@ const slides = [
     desc:  'Rigor jurídico que se traduz em resultados concretos.'
   },
   {
-    image: '/assets/imgs/bg2.png',
+    image: '/assets/imgs/bg3.png',
     title: 'Visão Estratégica',
     desc:  'Antecipamos riscos, potencializamos oportunidades.'
   },
   {
-    image: '/assets/imgs/bg3.png',
+    image: '/assets/imgs/bg4.png',
     title: 'Clareza e Ética',
     desc:  'Transparência que inspira confiança.'
   },
   {
-    image: '/assets/imgs/bg4.png',
+    image: '/assets/imgs/bg2.png',
     title: 'Inovação e valor sustentável',
     desc:  'Inovar para gerar valor que permanece.'
   },
@@ -36,34 +33,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const h2El   = txtBox.querySelector('h2');
   const pEl    = txtBox.querySelector('p');
 
+  const fadeDuration = 1500; // duração do fade (1.5s)
+  const slideInterval = 7000; // tempo entre slides (7s)
+
   function setText(index) {
     h2El.textContent = slides[index].title;
     pEl.textContent  = slides[index].desc;
   }
 
+  // fade sincronizado entre imagem e texto
   function fadeTo(nextIndex) {
     if (isAnimating) return;
     isAnimating = true;
 
     // aplica a nova imagem no bg2 e mostra
-    bg2.style.backgroundImage = 
+    bg2.style.backgroundImage =
       `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slides[nextIndex].image})`;
     bg2.style.opacity = 1;
 
-    // faz o fade do texto também
+    // fade-out no texto sincronizado
     txtBox.classList.add('fade-out');
     setTimeout(() => {
       setText(nextIndex);
       txtBox.classList.remove('fade-out');
-    }, 300);
+    }, fadeDuration / 2); // muda o texto no meio do fade
 
-    // depois da transição, troca o conteúdo do bg1 e reseta bg2
+    // depois do fade, troca o bg1
     setTimeout(() => {
       bg1.style.backgroundImage = bg2.style.backgroundImage;
       bg2.style.opacity = 0;
       current = nextIndex;
       isAnimating = false;
-    }, 1200);
+    }, fadeDuration);
   }
 
   function nextSlide() {
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // autoplay
   function startAutoSlide() {
-    autoSlide = setInterval(nextSlide, 7000); // tempo entre slides
+    autoSlide = setInterval(nextSlide, slideInterval);
   }
   function resetAutoSlide() {
     clearInterval(autoSlide);
@@ -94,7 +95,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   startAutoSlide();
-
-  // inicializa primeiro texto
   setText(current);
 });
